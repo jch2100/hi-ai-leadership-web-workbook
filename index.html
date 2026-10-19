@@ -798,7 +798,7 @@ code {
 .print-cover { display: none; }
 @page {
   size: A4 portrait;
-  margin: 14mm 17mm 16mm;
+  margin: 0;
   @bottom-center { content: counter(page); font: 8pt "Malgun Gothic", sans-serif; color: #666; }
 }
 @page:first { @bottom-center { content: none; } }
@@ -809,7 +809,7 @@ code {
 
   .print-cover {
     display: flex; flex-direction: column; position: relative;
-    height: 264mm; padding: 12mm 5mm 6mm;
+    height: 256mm; padding: 10mm 0 5mm;
     color: #222; background: #fff;
     break-after: page; break-inside: avoid;
   }
@@ -850,7 +850,10 @@ code {
     line-height: 1.6;
     orphans: 3; widows: 3;
   }
-  #main { max-width: none; margin: 0; padding: 0; }
+  #main {
+    max-width: none; margin: 0; padding: 18mm 22mm 20mm;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
   .prose { max-width: none; margin: 0; }
   .prose h2 { font-size: 16pt; margin: 20pt 0 9pt; }
   .prose h3 { font-size: 12.5pt; margin: 14pt 0 6pt; }
@@ -864,6 +867,7 @@ code {
     border-radius: 10pt;
     padding: 16pt;
     margin: 0 0 12pt;
+    page-break-after: avoid; break-after: avoid;
   }
   .hero .hero-title { font-size: 21pt; }
   .hero .hero-title, .hero strong, .hero li, .hero h2, .hero h3 { color: #000 !important; }
@@ -892,6 +896,7 @@ code {
   .prompt-head { display: block; page-break-after: avoid; break-after: avoid; }
   .prompt-body { orphans: 3; widows: 3; }
   .table-wrap { overflow: visible; }
+  .day:last-of-type .table-wrap { page-break-inside: avoid; break-inside: avoid; }
   .table-wrap table { width: 100%; font-size: 9.5pt; }
   thead { display: table-header-group; }
   .code pre, .code code { white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -1085,7 +1090,7 @@ AI 참모</h1>
 <p>오른쪽 아래 <strong>⋯ → 교재 출력하기</strong>를 누르면 표지와 모든 탭을 출력합니다.</p>
 </li>
 <li>
-<p>인쇄는 <strong>A4, 배율 100%, 브라우저 머리글·바닥글 끄기</strong>를 권합니다.</p>
+<p>인쇄는 <strong>A4, 배율 100%, 여백 없음, 브라우저 머리글·바닥글 끄기</strong>를 권합니다. 교재 자체에 좌우 22mm, 위 18mm, 아래 20mm의 인쇄 여백이 들어 있습니다.</p>
 </li>
 <li>
 <p>체크 표시는 현재 브라우저에 저장됩니다. 중요한 메모는 별도로 보관합니다.</p>
@@ -1104,7 +1109,7 @@ AI 참모</h1>
 
     </article>
   </section>
-  <section class="day print-break" id="day-1" role="tabpanel" aria-labelledby="tab-day-1"
+  <section class="day" id="day-1" role="tabpanel" aria-labelledby="tab-day-1"
            data-tab="말로 생각 꺼내기" data-minutes="2" hidden>
     <article class="prose">
 <section class="hero"><p class="eyebrow">01 · 25 MIN<span class="readtime">약 2분</span></p><h1 class="hero-title">AI는 일반적인 답을 알고, 나는 이번 상황을 압니다</h1>
@@ -1150,7 +1155,7 @@ AI 참모</h1>
 
     </article>
   </section>
-  <section class="day print-break" id="day-2" role="tabpanel" aria-labelledby="tab-day-2"
+  <section class="day" id="day-2" role="tabpanel" aria-labelledby="tab-day-2"
            data-tab="도구 연결" data-minutes="3" hidden>
     <article class="prose">
 <section class="hero"><p class="eyebrow">02 · 15 MIN<span class="readtime">약 3분</span></p><h1 class="hero-title">내게 필요한 정보와 기록을 연결합니다</h1></section>
@@ -1316,7 +1321,7 @@ AI 참모</h1>
 
     </article>
   </section>
-  <section class="day print-break" id="day-4" role="tabpanel" aria-labelledby="tab-day-4"
+  <section class="day" id="day-4" role="tabpanel" aria-labelledby="tab-day-4"
            data-tab="역할 4가지" data-minutes="1" hidden>
     <article class="prose">
 <section class="hero"><p class="eyebrow">ROLE MENU · 회의 비서에서 사용<span class="readtime">약 1분</span></p><h1 class="hero-title">내 생각을 어떻게 도와줄 비서가 필요한가요?</h1></section>
@@ -1545,7 +1550,7 @@ CSS와 필요한 JavaScript는 HTML 안에 넣고 외부 이미지·폰트·라�
 
     </article>
   </section>
-  <section class="day" id="day-7" role="tabpanel" aria-labelledby="tab-day-7"
+  <section class="day print-compact" id="day-7" role="tabpanel" aria-labelledby="tab-day-7"
            data-tab="다음 회의에 쓰기" data-minutes="2" hidden>
     <article class="prose">
 <section class="hero"><p class="eyebrow">FINISH · 10 MIN<span class="readtime">약 2분</span></p><h1 class="hero-title">한 번 써보고, 지침 한 문장을 고칩니다</h1></section>
