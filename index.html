@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>부장의 회의 준비를 돕는 AI 참모</title>
-<meta name="description" content="현대해상 신임부장 Step II · AI Leadership">
+<title>AI Leadership</title>
+<meta name="description" content="AI와 함께 전략을 설계하고 리더십을 점검하다 · 현대해상 신임부장을 위한 AI 활용 전략·기획 및 리더십 과정">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F2EEE6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
@@ -395,12 +395,15 @@ code {
 }
 .toc ol {
   margin: 0;
-  padding-left: 1.2em;
+  padding-left: 0;
   font-size: 0.95rem;
+  list-style: none;
+  counter-reset: toc-item;
 }
-.toc li { margin: 0 0 7px; }
+.toc li { margin: 0 0 7px; display: grid; grid-template-columns: 2em minmax(0, 1fr); counter-increment: toc-item; }
+.toc li::before { content: counter(toc-item) "."; text-align: left; }
 .toc li:last-child { margin-bottom: 0; }
-.toc li.toc-l3 { margin-left: 0.9em; font-size: 0.9rem; }
+.toc li.toc-l3 { margin-left: 0; font-size: inherit; }
 .toc a { color: var(--ink-soft); text-decoration: none; }
 .toc a:hover { color: var(--ink); text-decoration: underline; }
 
@@ -897,6 +900,7 @@ code {
   .prompt-body { orphans: 3; widows: 3; }
   .table-wrap { overflow: visible; }
   .day:last-of-type .table-wrap { page-break-inside: avoid; break-inside: avoid; }
+  .contains-task-list { page-break-inside: avoid; break-inside: avoid; }
   .table-wrap table { width: 100%; font-size: 9.5pt; }
   thead { display: table-header-group; }
   .code pre, .code code { white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -904,6 +908,11 @@ code {
   .print-compact .prose p, .print-compact .prose ul, .print-compact .prose ol { margin-top: 4pt; margin-bottom: 5pt; }
   .print-compact .prompt, .print-compact .callout { padding: 8pt 10pt; margin: 7pt 0; }
   .print-compact .prose h2 { margin-top: 14pt; }
+  .print-compact .prose li { margin-bottom: 4pt; }
+  .print-compact .task-list-item { padding: 5pt 8pt; }
+  .print-compact .hero { padding: 12pt; margin-bottom: 10pt; }
+  .print-compact .hero .hero-title { margin-bottom: 10pt; }
+  .print-compact .table-wrap th, .print-compact .table-wrap td { padding: 6pt 8pt; }
   .print-compact .prose img { max-height: 70mm; }
   .prose h2, .prose h3 { page-break-after: avoid; break-after: avoid; }
   a { text-decoration: none; color: #000 !important; }
@@ -916,7 +925,7 @@ code {
 <div class="progress" aria-hidden="true"><i></i></div>
 
 <header class="topbar">
-  <p class="site-title">부장의 회의 준비를 돕는 AI 참모</p>
+  <p class="site-title">AI Leadership</p>
   <div class="tabs-wrap">
     <nav class="tabs" role="tablist" aria-label="목차">
       <button class="pill is-active" type="button" role="tab"
@@ -970,13 +979,13 @@ code {
     
     <p class="cover-brand">현대해상 · 신임부장 Step II · AI Leadership</p>
     <div class="cover-heading">
-      <p class="cover-label">AI 활용 전략수립·기획 | 실습 워크북</p>
-      <h1 class="cover-title">부장의 회의 준비를 돕는
-AI 참모</h1>
-      <p class="cover-audience">정보를 얻고, 판단을 다듬고, 회의를 준비합니다</p>
-      <p class="cover-subtitle">내 생각을 말로 꺼내고
-나에게 맞는 비서와 함께 안건을 정리합니다.</p>
-      <p class="cover-topics">맥락 전달 → 도구 연결 → 회의 준비 → 슬라이드</p>
+      <p class="cover-label">실습 워크북</p>
+      <h1 class="cover-title">AI Leadership</h1>
+      <p class="cover-audience">AI와 함께 전략을 설계하고
+리더십을 점검하다</p>
+      <p class="cover-subtitle">현대해상 신임부장을 위한
+AI 활용 전략·기획 및 리더십 과정</p>
+      <p class="cover-topics">말로 생각 꺼내기 → 조사와 판단 → 회의 준비 → 전달</p>
     </div>
     <div class="cover-bottom">
       <div class="cover-access">
@@ -1004,22 +1013,24 @@ AI 참모</h1>
   </section>
   
   <section class="day print-compact" id="day-0" role="tabpanel" aria-labelledby="tab-day-0"
-           data-tab="시작" data-minutes="2">
+           data-tab="시작" data-minutes="3">
     <article class="prose">
-<section class="hero"><p class="eyebrow">START · 10 MIN<span class="readtime">약 2분</span></p><h1 class="hero-title">다음 회의를 준비하는 나만의 AI 참모</h1>
-<p><mark>오늘은 내가 판단할 재료를 얻고, 반복해서 쓰는 회의 준비 비서를 만듭니다.</mark></p>
+<section class="hero"><p class="eyebrow">START · 15 MIN<span class="readtime">약 3분</span></p><h1 class="hero-title">AI와 함께 전략을 설계하고 리더십을 점검하다</h1>
+<p><mark>내 업무에 필요한 정보를 모으고, 판단을 점검하며, 나에게 맞는 회의 준비 비서를 만듭니다.</mark></p>
+<p>현대해상 신임부장을 위한 AI 활용 전략·기획 및 리더십 과정</p>
 </section>
 
-<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-0-s1">오늘 손에 남길 세 가지</a></li><li class="toc-l2"><a href="#day-0-s2">오늘의 흐름</a></li><li class="toc-l2"><a href="#day-0-s3">같은 가상 안건을 끝까지 이어갑니다</a></li><li class="toc-l2"><a href="#day-0-s4">웹과 종이로 사용하는 방법</a></li></ol></nav>
+<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-0-s1">오늘 손에 남길 결과물</a></li><li class="toc-l2"><a href="#day-0-s2">오늘의 흐름</a></li><li class="toc-l2"><a href="#day-0-s3">본인 업무의 한 가지 주제로 이어갑니다</a></li><li class="toc-l2"><a href="#day-0-s4">웹과 종이로 사용하는 방법</a></li></ol></nav>
 
 <p><a href="https://chatgpt.com/g/g-p-6ad5f93933208191a4ad732a1132bf0c-hyeondaehaesang-rideo-peuropil-seutyudio/project" target="_blank" rel="noopener noreferrer" style="display:inline-block;max-width:100%;box-sizing:border-box;padding:12px 18px;border:2px solid currentColor;border-radius:12px;font-weight:700;text-decoration:none;">현대해상 리더 프로필 스튜디오 열기 ↗</a></p>
-<p>아이스브레이킹으로 프로필 이미지 한 장을 만들어봅니다. 사진과 대화가 다른 참여자에게 보일 수 있으므로 공유해도 되는 본인의 사진만 사용하세요.</p>
-<h2 id="day-0-s1">오늘 손에 남길 세 가지</h2>
+<p>아이스브레이킹으로 업무에 활용할 프로필 이미지 한 장을 만들어봅니다. 공유 프로젝트의 사진과 대화는 다른 참여자에게 보일 수 있습니다. 공유해도 되는 본인의 사진만 사용하고, 부담스러우면 프롬프트를 받아 개인 채팅에서 제작하세요.</p>
 <ol>
-<li>내 상황과 판단 기준을 담은 요청 한 개.</li>
-<li>내가 직접 고친 회의 준비 비서의 지침.</li>
-<li>회의 안건을 설명하는 슬라이드 초안.</li>
+<li>프로젝트의 새 채팅에서 용도와 스타일을 고르고 본인 사진을 첨부합니다.</li>
+<li>실제 생성된 이미지의 본인다운 인상과 여백을 확인합니다. 피부와 잔머리는 자연스럽게 정돈하되 얼굴형·이목구비·나이와 헤어라인은 유지합니다.</li>
+<li>얼굴이 너무 크면 촬영 범위를 넓혀달라고 요청합니다. 마음에 드는 한 장을 저장하고 직접 열어봅니다.</li>
 </ol>
+<h2 id="day-0-s1">오늘 손에 남길 결과물</h2>
+<p>프로필 이미지 한 장, 내 업무에 맞는 조사 프롬프트와 읽고 확인한 요약, 직접 고친 회의 준비 비서 지침, 슬라이드 초안을 남깁니다. AI가 만든 결과는 내가 확인하고 수정합니다.</p>
 <h2 id="day-0-s2">오늘의 흐름</h2>
 <div class="table-wrap"><table><thead>
 <tr>
@@ -1030,9 +1041,9 @@ AI 참모</h1>
 </thead>
 <tbody>
 <tr>
-<td>시작</td>
-<td>준비와 연습 주제 확인</td>
-<td style="text-align:right">10분</td>
+<td>시작·아이스브레이킹</td>
+<td>리더 프로필 사진 한 장 만들기</td>
+<td style="text-align:right">15분</td>
 </tr>
 <tr>
 <td>말로 생각 꺼내기</td>
@@ -1047,7 +1058,7 @@ AI 참모</h1>
 <tr>
 <td>심층 리서치</td>
 <td>질문받기 → 실행 → 전체 읽기 → 목적별 요약</td>
-<td style="text-align:right">25분</td>
+<td style="text-align:right">30분</td>
 </tr>
 <tr>
 <td>휴식</td>
@@ -1056,13 +1067,13 @@ AI 참모</h1>
 </tr>
 <tr>
 <td>회의 준비 비서</td>
-<td>역할 선택, 지침 생성·수정, 대화</td>
-<td style="text-align:right">45분</td>
+<td>역할 선택, 프로젝트 설정, 회의 준비</td>
+<td style="text-align:right">40분</td>
 </tr>
 <tr>
 <td>슬라이드</td>
 <td>스타일 선택, 이미지 또는 단일 HTML</td>
-<td style="text-align:right">30분</td>
+<td style="text-align:right">25분</td>
 </tr>
 <tr>
 <td>다시 쓰기</td>
@@ -1070,18 +1081,17 @@ AI 참모</h1>
 <td style="text-align:right">10분</td>
 </tr>
 </tbody>
-</table></div><p><strong>총 170분, 휴식 포함입니다.</strong> 역할 4개와 디자인 5개는 선택지입니다. 모두 실행하지 않고 필요한 것을 고릅니다.</p>
-<h2 id="day-0-s3">같은 가상 안건을 끝까지 이어갑니다</h2>
-<p><strong>가상의 보험회사 영업조직에서 ‘주간회의를 60분에서 30분으로 줄이는 2주 실험’을 제안하는 상황</strong>입니다.</p>
+</table></div><p><strong>총 170분, 휴식 포함입니다.</strong> 역할 4개와 디자인 5개는 필요한 것만 고릅니다. Notion 기록은 선택 실습이며 교육 후에도 이어 할 수 있습니다. 조사 대기시간과 읽기 속도에 따라 끝내지 못한 내용은 표시하고 이어갑니다.</p>
+<h2 id="day-0-s3">본인 업무의 한 가지 주제로 이어갑니다</h2>
+<p><strong>나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장입니다. 2027년을 준비하며 [검토할 주제]에 대해 판단하려고 합니다.</strong> 이 문장의 빈칸부터 채웁니다.</p>
 <ul>
-<li>원하는 변화: 보고를 읽는 시간을 줄이고 결정할 일에 집중하기.</li>
-<li>예상 걱정: 현장 상황을 충분히 공유하지 못할 수 있음.</li>
-<li>결정할 것: 실험 여부, 공유할 항목, 돌아볼 기준.</li>
-<li>아직 없는 것: 실험 효과를 입증하는 데이터. AI가 숫자를 만들어 채우게 하지 않습니다.</li>
+<li>영업 업무 예: 고객 접점 변화에 따른 2027년 영업조직 운영 방향 검토.</li>
+<li>본사 업무 예: 2027년 고객 서비스 개선 또는 부서 간 협업 방향 검토.</li>
+<li>아직 주제가 없으면: 현대해상에서 주간회의 운영을 개선하는 제안을 연습합니다.</li>
 </ul>
-<p>현대해상의 실제 제도나 현안이 아닙니다. 본사 업무를 맡은 분은 가상의 부서 협업회의로 바꿔도 됩니다.</p>
+<p>위 예시는 연습을 위한 제안이며 현대해상의 확정된 현안이나 제도를 설명하는 것이 아닙니다. 본인의 실제 관심 주제로 바꾸되 공개 가능한 맥락만 사용합니다.</p>
 <aside class="callout"><p class="callout-title">🔎 연습 전에</p>
-<p>회사 내부자료와 고객·계약·설계사 식별정보는 입력하지 않습니다. 오늘은 공개 정보와 가상 사례로 연습합니다. AI의 조언은 내가 확인하고 채택합니다.</p>
+<p>회사 내부자료와 고객·계약·설계사 식별정보는 입력하지 않습니다. 공개 정보와 외부 AI에 제공 가능한 자료만 사용합니다. AI의 조언은 내가 확인하고 채택합니다.</p>
 </aside>
 <h2 id="day-0-s4">웹과 종이로 사용하는 방법</h2>
 <ul class="contains-task-list">
@@ -1101,7 +1111,7 @@ AI 참모</h1>
 <p><input class="task-list-item-checkbox"  type="checkbox"> ChatGPT에 로그인했습니다.</p>
 </li>
 <li class="task-list-item enabled">
-<p><input class="task-list-item-checkbox"  type="checkbox"> 오늘 연습할 가상 안건을 확인했습니다.</p>
+<p><input class="task-list-item-checkbox"  type="checkbox"> 내가 조사하고 판단할 업무 주제를 정했습니다.</p>
 </li>
 <li class="task-list-item enabled">
 <p><input class="task-list-item-checkbox"  type="checkbox"> 음성 입력이 안 되면 키보드로 입력할 수 있습니다.</p>
@@ -1111,49 +1121,66 @@ AI 참모</h1>
 
     </article>
   </section>
-  <section class="day print-break" id="day-1" role="tabpanel" aria-labelledby="tab-day-1"
-           data-tab="말로 생각 꺼내기" data-minutes="2" hidden>
+  <section class="day print-break print-compact" id="day-1" role="tabpanel" aria-labelledby="tab-day-1"
+           data-tab="말로 생각 꺼내기" data-minutes="3" hidden>
     <article class="prose">
-<section class="hero"><p class="eyebrow">01 · 25 MIN<span class="readtime">약 2분</span></p><h1 class="hero-title">AI는 일반적인 답을 알고, 나는 이번 상황을 압니다</h1>
-<p><mark>사람이 할 일은 목적과 상황을 설명하고, 결과를 판단하는 것입니다.</mark></p>
+<section class="hero"><p class="eyebrow">01 · 25 MIN<span class="readtime">약 3분</span></p><h1 class="hero-title">역할을 정하고, 충분히 말하고, 질문받습니다</h1>
+<p><mark>AI 시대에 사람이 할 일은 목적과 맥락을 전달하고, 근거를 확인하며, 최종 판단을 내리는 것입니다.</mark></p>
 </section>
 
-<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-1-s1">먼저 골라보세요</a></li><li class="toc-l2"><a href="#day-1-s2">60초 동안 말로 풀어보세요</a></li><li class="toc-l2"><a href="#day-1-s3">길게 말하기 어려우면 질문을 받으세요</a></li></ol></nav>
+<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-1-s1">먼저 골라보세요</a></li><li class="toc-l2"><a href="#day-1-s2">프롬프트의 기본 규칙 네 가지</a></li><li class="toc-l2"><a href="#day-1-s3">60초 동안 말로 풀어보세요</a></li><li class="toc-l2"><a href="#day-1-s4">길게 말하기 어려우면 질문을 받으세요</a></li></ol></nav>
 
 <h2 id="day-1-s1">먼저 골라보세요</h2>
 <p><strong>질문 1. 같은 AI인데 왜 사람마다 얻는 답이 다를까요?</strong></p>
-<p>A. 어려운 용어를 많이 써야 해서 / B. 목적·상황·판단 기준이 달라서</p>
-<p><strong>질문 2. 다음 중 내 회의에 가까운 답을 얻기 쉬운 요청은 무엇일까요?</strong></p>
-<p>A. “회의 줄이는 방법 알려줘.”</p>
-<p>B. “가상 영업조직의 주간회의가 60분입니다. 30분으로 줄이고 싶지만 현장 정보가 빠질까 걱정됩니다. 2주 실험을 제안하려고 합니다. 예상 반대와 보완책을 함께 정리해주세요.”</p>
-<details><summary>함께 확인할 답</summary><p>두 질문 모두 B입니다. 글자 수보다 필요한 맥락이 있는지가 중요합니다. 첫 요청에서 상황을 충분히 전달하고 이후 대화로 수정해 보세요. 중요한 조건을 빼고 짧은 지시만 반복하는 것은 피합니다.</p></details>
-<h2 id="day-1-s2">60초 동안 말로 풀어보세요</h2>
-<p>휴대폰 키보드의 마이크나 사용 가능한 음성 입력을 활용합니다. 노트북에서는 글로 적어도 됩니다. 전송 전에 인식된 글의 날짜·숫자·이름을 확인합니다.</p>
-<ol>
-<li>어떤 회의를 준비하나요?</li>
-<li>무엇을 바꾸고 싶나요?</li>
-<li>누가 어떤 점을 걱정할까요?</li>
-<li>회의가 끝났을 때 무엇이 결정돼야 하나요?</li>
-</ol>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">먼저 내 이야기를 모아주세요</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">가상의 보험회사 부장으로서 주간회의 개선안을 준비하고 있습니다.
-지금부터 생각을 말하겠습니다. 아직 해결책이나 발표문을 만들지 마세요.
-내 말을 이 대화 안에서 축적하고, 빠진 맥락을 확인하는 질문만 한 번에 하나씩 해주세요.
-목적, 참석자, 바꾸려는 점, 예상 반발, 결정할 것 중 빠진 내용을 물어봐 주세요.
-내가 '정리해줘'라고 말하면 사실·내 생각·미확인 사항을 나누어 요약하고 맞게 이해했는지 확인하세요.
-외부 조사와 노션 저장은 하지 마세요. 실제 회사 내부정보를 요구하지 마세요.
-먼저 '어떤 회의를 준비하시나요?'라고 질문해주세요.</pre></div>
-<h2 id="day-1-s3">길게 말하기 어려우면 질문을 받으세요</h2>
-<p>질문에는 아는 만큼 답하고, 모르겠으면 “아직 정하지 않았어”라고 말합니다. 짧은 답도 모이면 충분한 맥락이 됩니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">모은 내용을 정리하고 확인하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">정리해줘. 지금까지 내가 말한 내용만 사용하세요.
-① 회의 목적 ② 참석자 관점 ③ 바꾸려는 것 ④ 걱정하는 점 ⑤ 결정할 것 ⑥ 아직 모르는 것을 정리하세요.
-내가 말하지 않은 사실이나 숫자는 추가하지 마세요.
-마지막에는 '수정할 내용이 있나요?'라고 묻고 기다려주세요.</pre></div>
+<p>A. 어려운 용어를 많이 써야 해서 / B. 목적·상황·판단 기준을 다르게 알려줘서</p>
+<p><strong>질문 2. 처음 요청할 때 어느 쪽이 내 상황을 이해시키기 쉬울까요?</strong></p>
+<p>A. “전략 짜줘”, “더 구체적으로”, “다시”처럼 짧은 지시만 반복하기.</p>
+<p>B. 내가 맡은 업무, 결정할 문제, 우려와 원하는 결과를 한 번에 충분히 말하기.</p>
+<details><summary>함께 확인할 답</summary><p>두 질문 모두 B입니다. 글자 수 자체보다 필요한 맥락이 중요합니다. 먼저 길게 상황을 설명하고 이후 대화로 수정합니다. 처음부터 길게 말하기 어렵다면 AI에게 질문을 부탁하고 짧게 답하면서 재료를 모아도 됩니다.</p></details>
+<h2 id="day-1-s2">프롬프트의 기본 규칙 네 가지</h2>
+<div class="table-wrap"><table><thead>
+<tr>
+<th>규칙</th>
+<th>이렇게 말합니다</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>페르소나</strong></td>
+<td>“너는 나의 생성형 AI 활용 전문 코치야.”처럼 역할을 지정합니다.</td>
+</tr>
+<tr>
+<td><strong>도와줘</strong></td>
+<td>“더 좋은 업무 성과를 내는 방법을 찾도록 도와줘.”처럼 목적을 말합니다.</td>
+</tr>
+<tr>
+<td><strong>질문해줘</strong></td>
+<td>부족한 맥락을 AI가 먼저 질문하게 합니다.</td>
+</tr>
+<tr>
+<td><strong>길게 말하기</strong></td>
+<td>업무·생각·우려·원하는 결과를 충분히 설명합니다.</td>
+</tr>
+</tbody>
+</table></div><h2 id="day-1-s3">60초 동안 말로 풀어보세요</h2>
+<p>아래 취지를 본인의 말로 읽고 상황을 덧붙입니다. 노트북의 음성 입력이나 휴대폰 키보드 마이크를 사용하고, 안 되면 글로 입력합니다. 전송 전에 날짜·숫자·이름의 인식 오류를 확인합니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">나의 AI 활용 코치에게 말하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">메모리와 지금까지 너와 나눈 대화 중 네가 실제로 확인할 수 있는 내용을 바탕으로 생각을 나누고 싶어. 확인할 수 없는 이전 대화는 아는 것처럼 말하지 마.
+나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장이야. 앞으로 너와 더 좋은 업무 성과를 내고 싶은데, 솔직히 아직 너를 어떻게 활용해야 할지 잘 모르겠어.
+너는 생성형 AI 활용 역량을 높이는 1:1 전문 코치야. 내가 너에게 무엇을 알려줘야 하고, 너는 나를 어떻게 도와주면 좋을지 대화를 통해 함께 정리하도록 도와줘.
+먼저 나에게 궁금한 것을 질문해줘. 질문은 한 번에 하나씩, 최대 5개만 해줘. 지금은 해결책을 서두르지 말고 내 답변을 이 대화 안에 모아줘.
+이전 대화를 확인할 수 없다면 지금 내 업무와 어려움부터 질문해줘. 충분히 이해했거나 내가 '정리해줘'라고 하면, 앞으로 내가 할 일과 네가 도와줄 방식을 정리해줘.</pre></div>
+<p><strong>실습:</strong> 질문에 2~3번 답하며 본인의 업무 장면을 구체적으로 설명합니다. 공유하면 안 되는 내부정보는 빼고, 모르는 것은 “미정”이라고 답합니다.</p>
+<h2 id="day-1-s4">길게 말하기 어려우면 질문을 받으세요</h2>
+<p>“아직 답하지 말고 질문해줘”, “우선 내 생각을 모아줘”라고 요청합니다. 질문에 답한 뒤 정리하고, 그 정리가 내 생각과 맞는지 확인한 다음 해결책을 논의합니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">모은 생각을 정리하고 확인하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">정리해줘. 지금까지 내가 말한 내용과 네가 실제로 확인할 수 있는 내용만 사용해줘.
+① 내가 원하는 성과 ② 현재 어려움 ③ 내가 AI에게 알려줄 것 ④ AI가 나에게 도와줄 방식 ⑤ 아직 모르는 것을 정리해줘.
+내가 말하지 않은 사실·개인 성향·숫자는 추가하지 마. 마지막에는 수정할 내용이 있는지 물어봐줘.</pre></div>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 내가 원한 변화가 한 문장으로 담겼습니다.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 내가 말하지 않은 이유나 수치가 섞이지 않았습니다.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 미정인 내용은 미정으로 남아 있습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 페르소나·도와줘·질문해줘를 넣어 요청했습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 내 업무와 원하는 성과를 충분히 설명했습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> AI가 정리한 내용에 내가 말하지 않은 사실이 섞이지 않았습니다.</li>
 </ul>
-<p><strong>막히면:</strong> “추천하지 말고 질문만 해줘”라고 다시 요청합니다. ‘축적’은 현재 대화에서 재료를 모은다는 뜻이며 다른 채팅이나 Notion에 자동 저장한다는 뜻은 아닙니다.</p>
+<p><strong>막히면:</strong> “추천하지 말고 질문 하나만 해줘”라고 요청합니다. ‘축적’은 현재 대화에서 재료를 모은다는 뜻이며 다른 채팅이나 Notion에 자동 저장한다는 뜻은 아닙니다.</p>
 
     </article>
   </section>
@@ -1196,7 +1223,7 @@ AI 참모</h1>
 <td>이용 가능 여부, 조사 범위, 출처와 한계</td>
 </tr>
 </tbody>
-</table></div><p>서비스마다 가입·권한·한도가 다릅니다. ChatGPT 무료 계정이라고 모든 연결이 무료로 열리는 것은 아닙니다.</p>
+</table></div><p>오늘은 무료로 이용 가능한 도구를 중심으로 살펴봅니다. 본인 계정에 표시되는 연결 상태와 사용 한도를 확인하며, 유료 결제는 하지 않습니다.</p>
 <h2 id="day-2-s3">도구를 사용하는 방법을 살펴봅니다</h2>
 <ol>
 <li>ChatGPT의 플러그인·앱 목록에서 <strong>Exa 또는 vidIQ</strong>를 찾습니다.</li>
@@ -1205,13 +1232,14 @@ AI 참모</h1>
 <li>새 대화에서 도구를 선택하거나 <code>@</code>로 찾아 지정합니다. 이름만 글로 쓰는 것과 실제 선택은 다를 수 있습니다.</li>
 <li>아래는 도구 사용 예시입니다. 사용법을 살펴본 뒤 다음 탭의 <strong>심층 리서치 과제</strong>를 직접 수행합니다.</li>
 </ol>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">Exa로 회의 아이디어 재료 찾기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">Exa를 사용해 공개 자료를 찾아주세요.
-가상의 보험회사 영업조직에서 주간회의를 개선하려고 합니다.
-최근 2년 내 공개된 영업회의 개선 또는 회의시간 절감 사례 3개를 찾아주세요.
-사례별로 원문 제목, 기관, 날짜, 주소, 확인되는 실행 방법, 우리 회의에서 검토할 질문을 정리하세요.
-보험업 사례가 없으면 다른 업종이라고 표시하세요. 효과가 입증되지 않았으면 미확인으로 남기세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">Exa로 전략 검토 재료 찾기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">Exa를 사용해 공개 자료를 찾아주세요.
+나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장입니다. 2027년 [검토할 주제]에 대한 전략을 준비하려고 합니다.
+조사 시점 기준 최근 2년의 관련 공개 자료 또는 실행 사례 3개를 찾아주세요.
+원문 제목, 기관, 날짜, 주소, 확인한 핵심과 우리 조직에서 검토할 질문을 정리하세요.
+보험업 사례를 우선하고 다른 업종은 구분하세요. 효과가 입증되지 않았으면 미확인으로 남기고 현대해상 내부 현황은 추정하지 마세요.
 원문을 읽지 못한 경우 읽은 것처럼 쓰지 마세요.</pre></div>
 <div class="prompt"><div class="prompt-head"><span class="prompt-label">vidIQ로 AI 활용 아이디어 살펴보기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">vidIQ를 사용해 관리자가 참고할 수 있는 AI 업무 활용 영상 후보 3개를 찾아주세요.
+나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장입니다. 관심 주제는 [입력]입니다.
 제목, 채널, 게시일, 링크와 회의에서 논의할 질문을 정리하세요.
 영상 설명만 확인했는지 자막까지 확인했는지 구분하세요.
 자막을 확인했다면 근거 구간과 핵심을 알려주세요. 확인하지 못한 내용을 상상해 요약하지 마세요.
@@ -1222,104 +1250,105 @@ AI 참모</h1>
 <div class="prompt"><div class="prompt-head"><span class="prompt-label">Notion에 쌓기 전 기록 초안</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">아직 Notion에 저장하지 마세요.
 정리한 내용을 날짜, 회의 제목, 논의할 질문, 결정된 것, 미결 사항, 다음 행동으로 나누어 기록 초안을 보여주세요.
 담당자와 기한은 내가 정한 것만 쓰고 나머지는 미정으로 남기세요.</pre></div>
-<p><strong>선택 연습:</strong> 연결돼 있으면 제목·저장 위치·내용을 확인한 후 “이 내용을 개인 연습 페이지에 저장해줘”라고 요청합니다. Notion에서 직접 열어 확인합니다. 연결이 안 되면 복사해 붙여넣어도 됩니다. 전체 기록 자동 축적은 이번 필수 실습에 포함하지 않습니다.</p>
+<p><strong>선택 연습:</strong> 연결돼 있으면 제목·저장 위치·내용을 확인한 후 “이 내용을 개인 연습 페이지에 저장해줘”라고 요청합니다. Notion에서 직접 열어 확인합니다. 연결이 안 되면 복사해 붙여넣어도 됩니다. 회의 준비 비서 탭의 <strong>선택 실습</strong>에 지침 추가·회의 데이터베이스·회의록 기록 프롬프트가 있습니다.</p>
 
     </article>
   </section>
-  <section class="day print-break" id="day-3" role="tabpanel" aria-labelledby="tab-day-3"
-           data-tab="심층 리서치 실습" data-minutes="4" hidden>
+  <section class="day print-break print-compact" id="day-3" role="tabpanel" aria-labelledby="tab-day-3"
+           data-tab="심층 리서치 실습" data-minutes="5" hidden>
     <article class="prose">
-<section class="hero"><p class="eyebrow">03 · 25 MIN<span class="readtime">약 4분</span></p><h1 class="hero-title">질문으로 조사 의뢰를 만들고, 읽은 뒤 목적에 맞게 요약합니다</h1>
+<section class="hero"><p class="eyebrow">03 · 30 MIN<span class="readtime">약 5분</span></p><h1 class="hero-title">2027년을 준비하는 부장의 조사와 판단</h1>
 <p><mark>질문받기 → 프롬프트 완성·실행 → 결과 전체 읽기 → 목적별 요약, 네 단계를 직접 해봅니다.</mark></p>
 </section>
 
-<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-3-s1">과제: 다음 회의에 쓸 조사 메모 만들기</a></li><li class="toc-l2"><a href="#day-3-s2">조사 프롬프트를 만들기 위해 질문받습니다</a></li><li class="toc-l3"><a href="#day-3-s3">질문에는 이렇게 답해볼 수 있습니다</a></li><li class="toc-l2"><a href="#day-3-s4">완성된 프롬프트를 실제로 입력합니다</a></li><li class="toc-l2"><a href="#day-3-s5">결과를 먼저 끝까지 읽습니다</a></li><li class="toc-l2"><a href="#day-3-s6">내가 사용할 목적에 맞게 요약합니다</a></li><li class="toc-l3"><a href="#day-3-s7">과제 완료 확인</a></li></ol></nav>
+<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-3-s1">과제: 내 업무의 2027년 준비 자료 만들기</a></li><li class="toc-l2"><a href="#day-3-s2">조사 프롬프트를 만들기 위해 질문받습니다</a></li><li class="toc-l3"><a href="#day-3-s3">질문에는 이렇게 답해볼 수 있습니다</a></li><li class="toc-l2"><a href="#day-3-s4">완성된 프롬프트를 실제로 입력합니다</a></li><li class="toc-l2"><a href="#day-3-s5">결과를 먼저 끝까지 읽습니다</a></li><li class="toc-l2"><a href="#day-3-s6">내가 사용할 목적에 맞게 요약합니다</a></li><li class="toc-l3"><a href="#day-3-s7">과제 완료 확인</a></li></ol></nav>
 
-<h2 id="day-3-s1">과제: 다음 회의에 쓸 조사 메모 만들기</h2>
-<p>공통 주제는 <strong>가상 영업조직의 주간회의 개선</strong>입니다. 2주 실험을 제안할지 판단하는 것이 목적입니다. 개인 주제로 바꿔도 공개 정보만 사용합니다.</p>
+<h2 id="day-3-s1">과제: 내 업무의 2027년 준비 자료 만들기</h2>
+<p>현대해상에서 맡고 있는 <strong>본인의 업무·조직과 검토할 주제</strong>를 정합니다. 영업조직 운영, 고객 접점 변화, 소비자 관점의 서비스 개선, 부서 협업 등 본인에게 필요한 주제를 고릅니다.</p>
 <p>오늘 남길 것은 <strong>최종 조사 프롬프트, 조사 결과, 읽으며 표시한 질문, 목적에 맞춘 요약</strong>입니다. 요약은 원문을 읽은 다음에 만듭니다.</p>
 <h2 id="day-3-s2">1. 조사 프롬프트를 만들기 위해 질문받습니다</h2>
-<p>일반 대화에서 아래 요청을 입력합니다. 아직 조사를 실행하는 단계가 아닙니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">심층 리서치 프롬프트 작성을 도와줘</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">[가상 보험회사 영업조직의 주간회의 개선]에 대한 심층 리서치를 수행하기 위한 프롬프트 작성을 도와주세요. 나에게 질문해주세요.
-지금은 조사하지 말고 목적과 범위를 정하는 질문을 한 번에 하나씩 해주세요.
-내가 어떤 결정을 하려는지, 누가 결과를 읽는지, 어느 기간·지역·업종을 조사할지, 어떤 출처와 결과 형식이 필요한지 확인하세요.
-정하지 못한 것은 선택지 2개를 제안하되 대신 결정하지 마세요.
-답변이 모이면 실제로 입력할 최종 조사 프롬프트 하나를 작성하고 수정할 부분을 물어본 뒤 기다리세요.</pre></div>
+<p>일반 대화에 아래 요청을 입력합니다. 빈칸은 직접 바꾸고, 아직 조사를 실행하지 않습니다. 첫 자료 확인도 포함하여 질문은 <strong>최대 5개</strong>, 한 번에 하나씩 받습니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">심층 리서치 프롬프트 작성을 도와줘</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장이야.
+2027년을 준비하기 위해 [검토할 주제]를 조사하려고 해.
+전략 수립을 지원하는 리서치 파트너로서 심층 리서치용 프롬프트 작성을 도와줘. 지금은 조사하지 말고 나에게 질문해줘.
+질문은 한 번에 하나씩, 전체 최대 5개만 해줘. 정보가 충분하면 일찍 끝내고, 한 질문에 여러 하위 질문을 숨겨 질문 수를 늘리지 마.
+첫 질문에서는 미리 준비한 계획안이나 참고자료가 있는지 확인하고, 있다면 외부 AI에 제공 가능한 자료를 업로드해 달라고 요청해줘. 자료가 없다면 ‘없음’이라고 답해도 진행해줘. 이 질문도 5개에 포함하고 이미 첨부하거나 말한 내용은 다시 묻지 마.
+남은 질문은 내가 결정할 문제, 조사 범위, 필요한 근거, 결과물 형태 중 핵심 내용에만 사용해줘. 담당 업무·조직은 처음 입력한 내용을 활용해줘.
+‘모르겠어’나 ‘미정’이라고 하면 질문을 늘리지 말고 권장 기본값을 제시해줘. 최종 프롬프트에 그 값은 제안으로 표시하고 확인되지 않은 현대해상 내부 현황·실적·직원 반응은 만들지 마.
+최대 5개 질문에 답하면 추가 확인 질문 없이 최종 조사 프롬프트 하나를 작성해줘. 목적·범위·출처 기준·결과 형식·미확인 사항 처리 원칙을 포함해줘. 이 대화에서는 리서치를 실행하지 마.</pre></div>
 <h3 id="day-3-s3">질문에는 이렇게 답해볼 수 있습니다</h3>
 <div class="table-wrap"><table><thead>
 <tr>
 <th>물어보는 것</th>
-<th>가상 사례의 답변 예시</th>
+<th>답변 예시: 본인 주제로 바꿉니다</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>왜 조사하나요?</td>
-<td>60분 회의를 30분으로 줄이는 2주 실험을 제안할지 판단하려고 합니다.</td>
+<td>준비한 자료가 있나요?</td>
+<td>없음. 공개 자료부터 살펴보고 싶습니다.</td>
 </tr>
 <tr>
-<td>누가 읽나요?</td>
-<td>회의에 참석하는 부서장과 현장 직원입니다.</td>
+<td>무엇을 결정하려고 하나요?</td>
+<td>2027년 우리 조직에서 우선 검토할 고객 접점 개선 과제를 고르려고 합니다.</td>
 </tr>
 <tr>
-<td>범위는요?</td>
-<td>최근 2년 국내 자료 우선. 보험·영업 사례가 없으면 다른 업종도 구분해 봅니다.</td>
+<td>조사 범위는요?</td>
+<td>최근 2년의 국내 보험업을 우선하고, 해외 사례는 구분해주세요.</td>
 </tr>
 <tr>
-<td>어떤 근거인가요?</td>
-<td>연구·공공기관·기업 공식 사례입니다. 홍보성 주장은 구분해주세요.</td>
+<td>필요한 근거는요?</td>
+<td>공공기관 통계·연구 원문·기업 공식 자료를 우선해주세요.</td>
 </tr>
 <tr>
-<td>결과 형식은요?</td>
-<td>발견 3개, 출처표, 부작용, 적용 전 확인할 질문입니다.</td>
+<td>결과물 형태는요?</td>
+<td>선택지 비교표와 검토 질문이 담긴 전략 검토 메모입니다.</td>
 </tr>
 </tbody>
-</table></div><p>목적이 다르면 답변도 바꿉니다. <strong>내가 무엇을 결정하려는지</strong>는 직접 말합니다.</p>
+</table></div><p>예시는 현대해상 내부 현황을 설명하는 것이 아닙니다. 직원 반응이나 실적을 알려준 것처럼 채우지 않습니다.</p>
 <h2 id="day-3-s4">2. 완성된 프롬프트를 실제로 입력합니다</h2>
-<p>최종 프롬프트에 목적·범위·출처·결과 형식·미확인 처리 방법이 있는지 확인합니다. 아래는 질문과 답변을 거쳐 완성될 수 있는 예시입니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">완성된 조사 의뢰 예시</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">가상 보험회사 영업조직에서 주간회의 60분을 30분으로 줄이는 2주 실험을 제안할지 판단하려고 합니다.
-최근 2년 공개된 국내 자료를 우선해 보고 중심 회의를 의사결정 중심으로 바꾼 방법과 부작용을 조사해주세요.
-보험·영업 사례를 먼저 찾고 없으면 다른 업종이라고 표시하세요. 오래된 핵심 연구는 연도를 표시하세요.
-연구 원문, 공공기관, 기업 공식 자료를 우선하고 홍보성 주장은 구분하세요.
-① 발견 3개 ② 제목·기관·날짜·주소·확인한 내용의 출처표 ③ 자료 간 차이 ④ 예상 우려 ⑤ 적용 전 확인할 질문을 작성하세요.
-근거와 해석을 구분하고 없는 효과 수치나 내부 현황을 만들지 마세요.
-마지막에 이 조사로 판단할 수 있는 것과 아직 판단할 수 없는 것을 구분하세요.</pre></div>
+<p>최종 프롬프트에 내 목적·범위·출처·결과 형식이 반영됐는지 읽습니다. 아래 예시는 구성 참고용이며 <strong>본인의 답변으로 완성한 프롬프트</strong>를 실행합니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">완성된 조사 의뢰 구성 예시</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장입니다. 2027년을 준비하며 [검토할 주제]에 대한 [결정할 문제]를 판단하려고 합니다.
+조사 시점 기준 최근 2년의 국내 공개 자료를 우선하고, 해외 사례나 오래된 핵심 연구는 지역과 연도를 구분해주세요. 2027년 전망은 확정 사실과 구분해주세요.
+공공기관 통계, 연구 원문, 기업 공식 자료를 우선하고 홍보성 주장과 근거가 약한 전망은 표시해주세요.
+① 핵심 변화 3개 ② 제목·기관·날짜·원문 주소·확인한 내용의 출처표 ③ 선택지 비교 ④ 반대 근거와 불확실성 ⑤ 우리 조직에 적용하기 전 확인할 질문을 정리해주세요.
+현대해상 내부 현황·실적·직원 반응이나 없는 수치를 만들지 말고 사실·해석·제안을 구분해주세요. 자료가 없거나 읽지 못했으면 명시해주세요.
+끝에는 이 조사로 판단할 수 있는 것과 아직 판단할 수 없는 것을 구분해주세요.</pre></div>
 <ol>
-<li><strong>내 답변으로 완성한 최종 프롬프트</strong>를 복사합니다. 예시는 그대로 따라야 하는 정답이 아닙니다.</li>
-<li>입력창 옆 <strong>파일 등 추가(+) → 심층 리서치</strong>를 선택하고 입력합니다. 이 메뉴가 보이는 화면에서는 플러그인 목록에서 이름을 검색할 필요가 없습니다.</li>
-<li>조사 범위 확인 화면이 나오면 검토한 뒤 실행합니다.</li>
-<li>조사 앱이 열리는지 보고, 완료될 때까지 기다린 뒤 제목과 범위를 확인합니다. 표시 오류가 나면 앱의 <strong>다시 시도</strong> 또는 <strong>탭에서 앱 열기</strong>를 사용합니다. 조사 진행 화면과 완료 보고서를 확인한 뒤 다음 단계로 갑니다.</li>
+<li>내 답변을 반영한 최종 프롬프트를 복사합니다.</li>
+<li>새 대화의 <strong>파일 등 추가(+) → 심층 리서치</strong>를 선택하고 입력합니다. 메뉴 위치는 현재 화면을 기준으로 확인합니다.</li>
+<li>조사 계획이나 범위 확인 화면이 나오면 검토하고 실행합니다.</li>
+<li>완료 보고서의 제목과 범위가 내 요청과 맞는지 확인합니다. 진행 화면만 보고 완료로 판단하지 않습니다.</li>
 </ol>
-<p><strong>막히면:</strong> 이용 한도·권한으로 실행이 안 되면 결제하지 않습니다. 강사 시연 결과를 읽거나 직접 찾은 공개 자료로 읽기·요약을 연습합니다. 이 경우 본인의 리서치 실행 완료로 체크하지 않습니다.</p>
+<p><strong>막히면:</strong> 한도나 권한으로 실행이 안 되면 강사 시연 결과 또는 직접 찾은 공개 자료로 읽기·요약을 연습합니다. 이 경우 본인의 리서치 실행 완료로 체크하지 않습니다.</p>
 <h2 id="day-3-s5">3. 결과를 먼저 끝까지 읽습니다</h2>
-<p>요약부터 요청하지 않습니다. 목차를 확인하고 <strong>처음부터 끝까지 한 번 읽으며</strong> 다음을 표시합니다.</p>
+<p>목차를 확인하고 <strong>처음부터 끝까지 한 번 읽으며</strong> 다음을 표시합니다. 요약 요청은 그다음입니다.</p>
 <ul>
-<li><strong>쓸 수 있는 내용:</strong> 내 안건을 판단하는 데 도움이 되는 부분.</li>
+<li><strong>쓸 수 있는 내용:</strong> 내 판단에 도움이 되는 변화와 근거.</li>
 <li><strong>확인할 내용:</strong> 원문·날짜·대상·수치를 다시 볼 부분.</li>
-<li><strong>남은 질문:</strong> 결과로도 결정할 수 없는 부분.</li>
+<li><strong>남은 질문:</strong> 결과만으로 결정할 수 없는 부분.</li>
 </ul>
-<p>출처 한 개 이상을 직접 열어 AI 설명과 대조합니다. 수업 중 다 읽지 못하면 남은 범위를 표시해 이어 읽습니다. 끝까지 읽지 않았다면 전체 읽기 완료로 체크하지 않습니다.</p>
+<p>출처 한 개 이상을 직접 열어 AI 설명과 대조합니다. 다 읽지 못하면 남은 범위를 표시해 교육 후 이어 읽습니다. 전체를 읽기 전에는 완료로 체크하지 않습니다.</p>
 <h2 id="day-3-s6">4. 내가 사용할 목적에 맞게 요약합니다</h2>
-<p>보고용, 회의 논의용, 실행 검토용 요약은 다릅니다. 아래 <strong>목적·독자·분량</strong>을 내 상황에 맞게 고칩니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">읽은 결과를 내 목적에 맞게 요약하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">위 심층 리서치 결과를 내가 사용할 목적에 맞게 요약해주세요.
-목적: 가상 영업조직 주간회의 개선안을 논의할 회의 준비.
-독자: 부서장과 현장 직원.
-분량: A4 한 쪽 정도. 핵심을 읽고 5분 안에 쟁점을 논의할 수 있게 작성하세요.
-구성: ① 결정할 질문 ② 관련된 발견 3개 ③ 각 발견의 원문 출처 ④ 반대 근거·부작용 ⑤ 적용 전 확인할 것 ⑥ 회의에서 물을 질문 3개.
-원래 조사에 있는 내용만 쓰고 새로운 조사나 숫자는 추가하지 마세요.
-사실·해석·제안을 구분하고 중요한 한계와 반대 근거를 빼지 마세요.
+<p>보고용, 전략 검토용, 회의 논의용 요약은 다릅니다. 아래 목적·독자·분량을 본인의 상황에 맞게 고칩니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">읽은 결과를 내 목적에 맞게 요약하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">위 심층 리서치 결과를 내가 사용할 목적에 맞게 요약해줘.
+나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장이야.
+목적: 2027년 [검토할 주제]에 대한 [보고 / 전략 검토 / 회의 논의].
+독자: [누가 읽는지]. 분량: [예: A4 한 쪽, 5분 안에 읽을 분량].
 내가 표시한 관심 사항: [직접 입력].
-마지막에 요약에서 생략한 주요 항목과 보고서에서 다시 읽을 부분을 알려주세요.</pre></div>
+구성: ① 결정할 질문 ② 핵심 발견 3개 ③ 각 발견의 원문 출처 ④ 반대 근거·한계 ⑤ 적용 전 확인할 것 ⑥ 다음 논의 질문 3개.
+원래 조사에 있는 내용만 쓰고 새로운 조사나 숫자는 추가하지 마. 사실·해석·제안을 구분하고 중요한 조건과 불확실성을 생략하지 마.
+끝에는 요약에서 생략한 주요 항목과 원문에서 다시 읽을 부분을 알려줘.</pre></div>
 <p>요약을 원래 결과와 대조합니다. 중요한 조건이나 반대 근거가 빠졌다면 다시 넣도록 요청합니다.</p>
 <h3 id="day-3-s7">과제 완료 확인</h3>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 질문에 답해 나의 최종 조사 프롬프트를 만들었습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 최대 5개 질문에 답해 나의 조사 프롬프트를 만들었습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 완성된 프롬프트로 심층 리서치를 실제 실행했습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 결과를 처음부터 끝까지 읽었습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 원문 출처 한 개 이상을 직접 확인했습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 목적·독자·분량을 지정해 요약하고 원래 결과와 대조했습니다.</li>
 </ul>
-<p><strong>회의 비서에게 넘길 것:</strong> 목적에 맞춘 요약과 남은 질문입니다. 조사 비서는 자료를 찾고 회의 비서는 그 재료로 안건과 논리를 다듬습니다.</p>
+<p><strong>회의 비서에게 넘길 것:</strong> 확인한 요약과 남은 질문입니다. 조사 파트너는 자료를 찾고, 회의 준비 비서는 그 재료로 안건과 논리를 다듬습니다.</p>
 
     </article>
   </section>
@@ -1328,10 +1357,10 @@ AI 참모</h1>
     <article class="prose">
 <section class="hero"><p class="eyebrow">ROLE MENU · 회의 비서에서 사용<span class="readtime">약 1분</span></p><h1 class="hero-title">내 생각을 어떻게 도와줄 비서가 필요한가요?</h1></section>
 
-<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-4-s1">네 가지 중 하나로 시작합니다</a></li><li class="toc-l2"><a href="#day-4-s2">이렇게 바꿔 써보세요</a></li><li class="toc-l2"><a href="#day-4-s3">나의 선택</a></li></ol></nav>
+<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-4-s1">네 가지 중 하나로 시작합니다</a></li><li class="toc-l2"><a href="#day-4-s2">나의 선택</a></li></ol></nav>
 
 <h2 id="day-4-s1">네 가지 중 하나로 시작합니다</h2>
-<p>AI에게 원하는 역할을 골라줍니다. 처음에는 한 역할로 대화하고, 필요할 때 다른 역할로 바꿉니다. 점검이 필요하면 두 역할을 순서대로 사용해도 됩니다.</p>
+<p>먼저 한 역할을 고르고, 필요하면 다른 역할로 바꾸거나 두 역할을 순서대로 사용합니다.</p>
 <div class="table-wrap"><table><thead>
 <tr>
 <th style="text-align:right">번호</th>
@@ -1343,119 +1372,152 @@ AI 참모</h1>
 <tbody>
 <tr>
 <td style="text-align:right">1</td>
-<td><strong>경청·정리 비서</strong></td>
-<td>생각이 흩어져 있거나 말문이 막힐 때</td>
-<td>질문으로 생각을 모으고 내 뜻을 살려 표현 다듬기</td>
+<td><strong>경청·정리</strong></td>
+<td>생각이 흩어질 때</td>
+<td>질문으로 생각을 모으고 표현 다듬기</td>
 </tr>
 <tr>
 <td style="text-align:right">2</td>
-<td><strong>논리·반대 검토 비서</strong></td>
+<td><strong>논리·반대 검토</strong></td>
 <td>내 생각만 맞아 보일 때</td>
-<td>주장·근거·가정을 나누고 반대 근거와 대안 제시하기</td>
+<td>주장·근거·가정을 나누고 반대 의견 검토</td>
 </tr>
 <tr>
 <td style="text-align:right">3</td>
-<td><strong>직원 관점·설득 비서</strong></td>
-<td>현장 반발이 걱정될 때</td>
-<td>부담과 우려를 가정하고 설명·협의할 방법 만들기</td>
+<td><strong>직원 관점·설득</strong></td>
+<td>부담과 반발이 걱정될 때</td>
+<td>예상 우려와 설명·협의할 방법 정리</td>
 </tr>
 <tr>
 <td style="text-align:right">4</td>
-<td><strong>실행·회의 진행 비서</strong></td>
-<td>안건이 많거나 실행이 막막할 때</td>
-<td>결정 질문·논의 순서·작은 실험·점검 기준 정리하기</td>
+<td><strong>실행·후속 점검</strong></td>
+<td>실행이 막막할 때</td>
+<td>논의 순서·다음 행동·점검 기준 정리</td>
 </tr>
 </tbody>
-</table></div><p>이 역할은 사고를 돕는 관점입니다. 실제 직원의 마음을 알고 있다는 뜻은 아닙니다. 예상 반응은 가설로 표시하고 사람에게 확인합니다.</p>
-<h2 id="day-4-s2">이렇게 바꿔 써보세요</h2>
-<ul>
-<li>처음에는 <strong>1번</strong>에게 질문받으며 생각을 모읍니다.</li>
-<li>정리한 뒤 <strong>2번</strong>에게 논리의 빈틈을 점검받습니다.</li>
-<li>실행하는 사람의 우려는 <strong>3번</strong>, 실행 순서와 회의 흐름은 <strong>4번</strong>에게 묻습니다.</li>
-</ul>
+</table></div><p>역할은 사고를 돕는 관점입니다. 예상 직원 반응은 가설로 표시하고 사람에게 확인합니다.</p>
+<p><strong>이렇게 바꿔 써보세요:</strong> 1번으로 생각을 모은 뒤 2번으로 논리를 점검합니다. 직원 우려는 3번, 실행 순서와 후속 점검은 4번에게 묻습니다.</p>
 <div class="prompt"><div class="prompt-head"><span class="prompt-label">두 역할을 순서대로 사용하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">먼저 '직원 관점·설득 비서'로 내 제안에 대한 우려를 질문 하나로 확인해주세요.
 내가 답한 뒤 '논리·반대 검토 비서'로 바꿔 빠진 근거와 반대 의견을 점검해주세요.
 직원 반응은 가설로 표시하고, 최종 결정은 나에게 남겨주세요.</pre></div>
-<h2 id="day-4-s3">나의 선택</h2>
-<ul>
-<li>주로 쓸 역할: ____________________</li>
-<li>점검할 때 부를 역할: ____________________</li>
-<li>원하는 말투: ____________________</li>
-<li>하지 않았으면 하는 행동: ____________________</li>
-</ul>
+<h2 id="day-4-s2">나의 선택</h2>
+<p>주로 쓸 역할: ______________ / 점검할 역할: ______________</p>
+<p>원하는 말투: ______________ / 피할 행동: ______________</p>
 <p><strong>성공 확인:</strong> 비서가 선택한 관점으로 질문합니다. 답이 너무 길면 “이번에는 질문 하나만 해줘”라고 요청합니다.</p>
 
     </article>
   </section>
   <section class="day print-break print-compact" id="day-5" role="tabpanel" aria-labelledby="tab-day-5"
-           data-tab="회의 준비 비서" data-minutes="3" hidden>
+           data-tab="회의 준비 비서" data-minutes="7" hidden>
     <article class="prose">
-<section class="hero"><p class="eyebrow">04 · 역할 선택 포함 45 MIN<span class="readtime">약 3분</span></p><h1 class="hero-title">내가 고친 지침으로 반복해서 쓰는 비서를 만듭니다</h1></section>
+<section class="hero"><p class="eyebrow">04 · 역할 선택 포함 40 MIN<span class="readtime">약 7분</span></p><h1 class="hero-title">프로젝트를 만들고 나에게 맞는 비서를 설정합니다</h1></section>
 
-<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-5-s1">지침을 만드는 대화를 합니다</a></li><li class="toc-l2"><a href="#day-5-s2">받은 지침을 직접 고칩니다</a></li><li class="toc-l2"><a href="#day-5-s3">프로젝트에 지침을 넣습니다</a></li><li class="toc-l2"><a href="#day-5-s4">안건별로 대화한 뒤 메모를 남깁니다</a></li><li class="toc-l2"><a href="#day-5-s5">새 대화에서 다시 시험합니다</a></li></ol></nav>
+<nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-5-s1">프로젝트를 먼저 만듭니다</a></li><li class="toc-l2"><a href="#day-5-s2">지침 생성용 프롬프트를 입력하고 답합니다</a></li><li class="toc-l2"><a href="#day-5-s3">최종 프로젝트 지침을 직접 수정합니다</a></li><li class="toc-l2"><a href="#day-5-s4">프로젝트 설정에 지침을 저장합니다</a></li><li class="toc-l2"><a href="#day-5-s5">첫 채팅에서 회의 상황을 말합니다</a></li><li class="toc-l2"><a href="#day-5-s6">새 대화에서 다시 시험합니다</a></li><li class="toc-l2"><a href="#day-5-s7">선택 실습 · 회의 준비와 회의록을 Notion에 기록하기</a></li><li class="toc-l3"><a href="#day-5-s8">기존 프로젝트 지침에 추가할 내용</a></li><li class="toc-l3"><a href="#day-5-s9">회의 데이터베이스 만들기</a></li><li class="toc-l3"><a href="#day-5-s10">회의 준비 메모 또는 받은 회의록 기록하기</a></li></ol></nav>
 
-<h2 id="day-5-s1">1. 지침을 만드는 대화를 합니다</h2>
-<p>일반 대화에 아래 프롬프트를 넣습니다. 역할은 앞 탭의 네 가지 중 고릅니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">나에게 맞는 프로젝트 지침 만들기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">나만의 '회의 준비 비서' 프로젝트 지침을 만들고 싶습니다.
-지금은 안건을 해결하지 말고 비서의 일하는 방식을 정하는 질문만 해주세요.
-한 번에 한 질문씩, 최대 5개를 물어봐 주세요.
-질문할 내용: 회의 유형, 원하는 역할, 선호 말투, 질문·정리 순서, 피하고 싶은 행동.
-역할은 ① 경청·정리 ② 논리·반대 검토 ③ 직원 관점·설득 ④ 실행·회의 진행 중 선택하게 해주세요.
-내 답을 모은 뒤 다음 규칙을 포함해 복사할 수 있는 프로젝트 지침 하나를 작성하세요.
-- 먼저 듣고 부족한 맥락을 질문한다. 내가 정리하라고 할 때까지 해결책을 서두르지 않는다.
-- 안건을 하나씩 다루고 사실·의견·가정·미결 사항을 구분한다.
-- 직원 반응과 효과는 확인 전까지 가설로 표시한다.
-- 새 외부 조사는 필요성과 범위를 먼저 제안하고 동의 후 사용 가능한 도구로 한다.
-- 내부자료와 개인정보를 요구하지 않는다. 최종 판단은 내가 한다.
-- 결정할 것과 다음 행동을 정리하고, 담당·기한을 임의 확정하지 않는다.
-- 외부 저장·발송은 내가 내용을 확인하고 요청한 경우에만 수행한다.
-지침을 보여준 뒤 수정할 부분을 묻고 기다리세요.</pre></div>
-<h2 id="day-5-s2">2. 받은 지침을 직접 고칩니다</h2>
-<p>‘무조건 내 말에 동의’하는 문구는 근거가 부족할 때 알려주도록 고칩니다. 성격과 말투는 선택하되 사실 확인과 최종 판단은 남겨둡니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">지침 수정하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">주요 역할은 '경청·정리 비서', 점검 역할은 '논리·반대 검토 비서'로 하겠습니다.
-초반에는 질문을 하나씩 하고, 내가 '검토해줘'라고 할 때 반대 의견을 제시하세요.
-답변은 핵심 5개 이내로 하고 마지막에는 내가 결정할 질문 하나만 남겨주세요.
-수정한 지침 전체를 보여주세요. 말하지 않은 개인 성향은 추가하지 마세요.</pre></div>
-<h2 id="day-5-s3">3. 프로젝트에 지침을 넣습니다</h2>
+<h2 id="day-5-s1">1. 프로젝트를 먼저 만듭니다</h2>
 <ol>
-<li>ChatGPT의 <strong>탐색 → 프로젝트 → 만들기</strong>로 이동합니다. 화면에 따라 <strong>새 프로젝트</strong>로 표시될 수 있습니다.</li>
+<li>ChatGPT에서 <strong>프로젝트 → 새 프로젝트</strong> 또는 <strong>만들기</strong>를 선택합니다. 화면에 따라 탐색 메뉴 안에 있을 수 있습니다.</li>
 <li>이름을 <strong>나의 회의 준비 비서</strong>로 정합니다.</li>
-<li><strong>프로젝트 액션 → 프로젝트 설정 → 지침</strong>에 수정한 지침을 붙여넣고 <strong>저장</strong>을 누릅니다. 창만 닫으면 입력이 저장되지 않을 수 있습니다.</li>
-<li>지침을 다시 열어 저장됐는지 확인합니다.</li>
-<li>프로젝트 안에서 새 대화를 열고 아래 요청을 보냅니다.</li>
+<li>프로젝트 안에서 새 채팅을 열고 다음 프롬프트를 입력합니다.</li>
 </ol>
-<p>메뉴 위치는 화면마다 다를 수 있습니다. 프로젝트를 만들 수 없으면 일반 대화 첫 메시지에 지침을 넣고 연습합니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">첫 회의 준비 시작</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">가상 영업조직의 주간회의 개선을 준비하겠습니다.
-60분 회의를 30분으로 줄이는 2주 실험을 제안하려고 합니다.
-현장 정보가 빠지고 보고 준비 부담이 늘 수 있다는 걱정이 있습니다.
-우선 내 생각을 축적하고 질문만 해주세요. 정리와 반대 의견은 내가 요청할 때 진행하세요.
-실제 회사 제도·수치·직원 반응은 주어진 것이 없으니 만들지 마세요.</pre></div>
-<h2 id="day-5-s4">4. 안건별로 대화한 뒤 메모를 남깁니다</h2>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">회의 준비 메모</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">지금까지의 대화를 회의 준비 메모로 정리해주세요.
-① 목적 ② 결정할 질문 ③ 확인된 사실과 출처 ④ 내 제안과 이유 ⑤ 예상 반대와 보완책 ⑥ 미결 사항 ⑦ 다음 행동.
-확인된 사실이 없으면 없다고 쓰세요. 담당자와 기한은 확정된 것만 기입하세요.
-슬라이드는 아직 만들지 말고, 먼저 수정할 부분을 물어보세요.</pre></div>
-<h2 id="day-5-s5">5. 새 대화에서 다시 시험합니다</h2>
-<p>프로젝트 안에서 새 대화를 열고 “새 회의를 준비하려고 합니다. 먼저 질문해주세요.”라고 말합니다. 역할·말투·질문 순서를 확인합니다. 이전 대화 세부 안건까지 자동으로 정확히 기억한다고 가정하지 말고 필요한 메모를 전달합니다.</p>
-<ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 지침을 저장하고 다시 열어 확인했습니다.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 새 대화에서 원하는 방식으로 질문을 받았습니다.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 써본 뒤 지침 한 문장을 고쳤습니다.</li>
+<p>프로젝트를 만들 수 없으면 일반 대화에서 지침을 만들고, 이후 프로젝트를 사용할 수 있을 때 옮깁니다.</p>
+<h2 id="day-5-s2">2. 지침 생성용 프롬프트를 입력하고 답합니다</h2>
+<p>앞 탭의 역할 네 가지 중 주로 쓸 역할과 필요할 때 부를 역할을 고릅니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">나에게 맞는 프로젝트 지침 만들기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장이야. 나만의 '회의 준비 비서' 프로젝트 지침을 만들도록 도와줘.
+지금은 회의 안건을 해결하지 말고 비서의 일하는 방식을 정하는 질문을 한 번에 하나씩 최대 5개만 해줘. 이미 말한 내용은 다시 묻지 마.
+회의 유형, 원하는 역할, 말투, 질문·정리 순서, 피하고 싶은 행동 중 핵심 내용을 확인해줘.
+역할은 ① 경청·정리 ② 논리·반대 검토 ③ 직원 관점·설득 ④ 실행·후속 점검 중 선택하거나 순서대로 조합하게 해줘.
+답을 모은 뒤 다음 원칙을 포함한 프로젝트 지침을 작성해줘.
+- 먼저 듣고 부족한 맥락을 질문한다. 안건을 하나씩 다루고 정리와 검토 시점을 사용자에게 맞춘다.
+- 사실·의견·가정·미결 사항을 구분하고 직원 반응과 효과는 확인 전까지 가설로 표시한다.
+- 리서치가 필요하면 조사할 질문을 분리해 제안한다. 이미 확인한 조사 요약을 회의 준비에 활용한다.
+- 회사 내부자료와 개인정보를 요구하지 않는다. 최종 판단은 사용자가 한다.
+- 결정할 질문과 다음 행동을 정리하고 담당자·기한을 임의로 확정하지 않는다.
+- 외부 저장·발송은 사용자가 내용을 확인하고 요청한 경우에만 한다.
+최대 5개 답변 뒤 복사할 수 있는 지침 전체를 보여줘. 내가 말하지 않은 성향은 만들지 마.</pre></div>
+<h2 id="day-5-s3">3. 최종 프로젝트 지침을 직접 수정합니다</h2>
+<p>생성된 지침을 읽고 <strong>역할·말투·질문 순서·답변 길이·하지 않을 행동</strong>을 직접 고칩니다. 복사하기 전에 내 비서의 행동으로 적절한지 확인합니다.</p>
+<ul>
+<li>무조건 동의하기보다 근거가 부족하면 알려주도록 되어 있나요?</li>
+<li>질문과 정리, 반대 의견을 제시하는 시점이 내 방식에 맞나요?</li>
+<li>사실 확인과 최종 판단이 나에게 남아 있나요?</li>
 </ul>
-<p><strong>막히면:</strong> 불편했던 답변 하나를 보여주고 “이 답변을 피하도록 지침을 한 문장만 고쳐줘”라고 요청합니다.</p>
+<h2 id="day-5-s4">4. 프로젝트 설정에 지침을 저장합니다</h2>
+<ol>
+<li>최종 지침 전체를 복사합니다.</li>
+<li><strong>프로젝트 액션 → 프로젝트 설정 → 지침</strong>에 붙여넣고 <strong>저장</strong>을 누릅니다.</li>
+<li>지침을 다시 열어 저장됐는지 확인합니다. 채팅에서 만든 문안이 설정에 자동 반영됐다고 가정하지 않습니다.</li>
+<li>프로젝트 안에서 <strong>새 채팅</strong>을 열어 아래처럼 회의 준비를 시작합니다.</li>
+</ol>
+<h2 id="day-5-s5">5. 첫 채팅에서 회의 상황을 말합니다</h2>
+<p>아래 취지를 본인의 말로 음성 입력합니다. 직원 반응을 아직 확인하지 못했다면 “아직 모름”이라고 말합니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">첫 회의 준비 시작 · 음성 입력</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장이야.
+다음 주 월요일 [주제]에 대해 회의를 진행해.
+내가 전달하려는 메시지는 [내용]이고, 우려하는 점은 [내용]이야.
+직원들의 현재 반응은 [직접 확인한 내용 또는 아직 모름]이야. 내가 예상한 반응은 확인된 반응과 구분하고 싶어.
+나는 이번 회의를 통해 [달성할 목표]를 이루고 싶어.
+나의 회의 준비 비서로서 프로젝트 지침에 맞게 도와줘. 준비를 위해 내가 추가로 알려줘야 하는 것이 있을까?</pre></div>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">안건별 회의 준비 메모</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">지금까지의 대화를 회의 준비 메모로 정리해줘.
+① 목적 ② 결정할 질문 ③ 확인된 사실과 출처 ④ 내 제안과 이유 ⑤ 예상 우려와 보완책 ⑥ 미결 사항 ⑦ 다음 행동.
+내가 전달한 조사 요약이 있으면 활용하되 사실·해석·제안을 구분해줘. 담당자와 기한은 확정된 것만 적어줘.
+슬라이드는 아직 만들지 말고 메모를 먼저 보여줘.</pre></div>
+<h2 id="day-5-s6">6. 새 대화에서 다시 시험합니다</h2>
+<p>새 회의 채팅에서 질문 순서·말투·역할을 확인합니다. 이전 대화의 세부 안건을 정확히 기억한다고 가정하지 말고 필요한 메모를 전달합니다.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 프로젝트를 먼저 만들고 그 안에서 지침 생성 대화를 했습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 지침을 직접 수정해 설정에 저장하고 다시 열어 확인했습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 새 채팅에서 회의 상황을 설명하고 원하는 방식으로 질문받았습니다.</li>
+</ul>
+<p><strong>막히면:</strong> 불편했던 답변을 보여주고 “이 답변을 피하도록 지침을 한 문장만 고쳐줘”라고 요청합니다.</p>
+<h2 id="day-5-s7">선택 실습 · 회의 준비와 회의록을 Notion에 기록하기</h2>
+<p>오늘 하지 않아도 됩니다. 교육 후 연결된 Notion에서 회의 준비 메모와 받은 회의록을 <strong>회의 한 건당 하나의 항목</strong>으로 축적합니다. 같은 회의를 준비 기록과 종료 기록으로 중복 생성하지 않습니다.</p>
+<ol>
+<li><a href="https://www.notion.com/">Notion</a>에 로그인해 개인 연습용 빈 페이지 <strong>현대해상 회의 기록 실습</strong>을 만듭니다. 이미 있으면 재사용합니다.</li>
+<li>ChatGPT의 앱·플러그인에서 Notion을 연결하고 사용할 계정·작업 공간을 확인합니다. 프로젝트 대화에서 <code>@</code> 또는 앱 메뉴로 <strong>실제 Notion 도구를 선택</strong>합니다.</li>
+<li>연습용 페이지의 링크를 아래 프롬프트에 넣습니다. 페이지를 웹에 공개할 필요는 없습니다. 도구가 읽기 전용이면 기록 초안을 직접 붙여넣습니다.</li>
+</ol>
+<h3 id="day-5-s8">기존 프로젝트 지침에 추가할 내용</h3>
+<p>아래 문안을 기존 지침 <strong>맨 아래에 추가</strong>합니다. 앞에서 만든 지침 전체를 덮어쓰지 않습니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">프로젝트 지침에 추가 · Notion 회의 기록</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">[Notion 회의 기록]
+사용자가 현대해상 회의 준비 메모나 회의록을 기록해달라고 하면, 먼저 제목·일시·저장 위치와 기록 초안을 보여준다. 회의 준비와 회의 종료 기록을 구분하고 회의 한 건당 하나의 항목으로 연결한다.
+기록 항목은 목적·안건·준비 메모·확인된 결정·미결 사항·후속 업무·담당자·기한·원문 링크다. 받은 회의록은 원문 또는 원문 링크를 보존하고 AI 요약과 구분한다.
+확인되지 않은 결정·담당자·기한·직원 반응은 만들지 않고 미정으로 남긴다. 조직명과 실제 사실은 사용자가 제공한 내용만 사용한다.
+사용자가 초안을 확인하고 저장을 요청하면 Notion 도구로 지정 위치에 기록한다. 기존 회의 항목이 있는지 확인해 중복 생성을 피하고, 기존 내용은 임의로 삭제하지 않는다.
+실제 연결 도구가 없거나 쓰기 권한이 없으면 저장했다고 하지 말고 붙여넣을 초안을 제공한다. 저장 결과 링크를 제시하고 사용자가 Notion에서 직접 열어 확인하게 한다.</pre></div>
+<h3 id="day-5-s9">회의 데이터베이스 만들기</h3>
+<p>Notion 도구를 실제로 선택하고 개인 연습용 페이지를 지정합니다. 회사 내부자료나 개인정보는 넣지 않습니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">현대해상 회의 기록 데이터베이스 만들기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">Notion에서 내가 지정한 개인 연습용 페이지 [페이지 링크]에 '현대해상 회의 준비·기록' 데이터베이스를 만들어줘.
+생성 전에 같은 이름의 데이터베이스가 있는지 확인하고 있으면 그 위치를 보여줘. 기존 자료는 삭제하지 마.
+회의 한 건을 항목 하나로 관리해줘. 속성은 회의명(제목), 회의 일시(날짜), 담당 조직(텍스트), 상태(준비 중/회의 완료/후속 점검/종료), 안건(텍스트), 결정사항(텍스트), 후속 업무(텍스트), 담당자(텍스트), 기한(날짜), 원문 링크(URL)로 해줘.
+각 항목 본문에는 회의 목적, 준비 메모, 받은 회의록 원문 또는 원문 링크, 확인된 결정, 미결 사항, 후속 업무 목록을 나눠줘. 여러 후속 업무는 본문의 표에 업무·담당자·기한·상태로 적어줘.
+전체 목록과 준비 중·후속 점검 보기를 구성해줘. 실제 지원하지 않는 속성·보기는 가능한 범위만 만들고 나머지는 내가 직접 설정할 방법을 알려줘.
+내가 주지 않은 회의·직원·결정사항을 예시 데이터로 만들지 마. 완료 후 데이터베이스 링크와 실제 만든 속성·보기를 알려줘. 쓰기 도구나 권한이 없으면 생성했다고 하지 말고 직접 만들 수 있는 구조를 제공해줘.</pre></div>
+<h3 id="day-5-s10">회의 준비 메모 또는 받은 회의록 기록하기</h3>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">회의 기록 초안 만들고 저장하기</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">아래는 내가 정리한 회의 준비 내용 또는 외부 AI에 제공 가능한 회의록이야.
+회의명: [입력] / 회의 일시: [입력] / 담당 조직: [입력]
+종류: [회의 준비 / 회의 종료 후 기록]
+내용 또는 원문 링크: [입력]
+먼저 프로젝트 지침에 맞춰 기록 초안을 보여줘. 원문과 요약을 구분하고 미확인 결정·담당자·기한은 미정으로 남겨줘.
+내가 '저장해줘'라고 하면 [Notion 데이터베이스 링크]에서 같은 회의 항목을 찾아 업데이트하고, 없을 때만 새로 만들어줘. 기존 기록은 보존하고 추가한 부분을 알려줘. 완료 후 실제 기록 링크를 보여줘.</pre></div>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> Notion에서 회의 제목·일시·저장 위치와 실제 기록 내용을 확인했습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 받은 회의록 원문과 요약이 구분되고 담당자·기한이 임의로 채워지지 않았습니다.</li>
+</ul>
+<p><strong>연결이 안 되면:</strong> 같은 구조로 기록 초안을 받아 Notion에 직접 붙여넣습니다. 도구가 완료했다고 말해도 실제 페이지에서 확인합니다.</p>
 
     </article>
   </section>
   <section class="day print-break print-compact" id="day-6" role="tabpanel" aria-labelledby="tab-day-6"
            data-tab="슬라이드 만들기" data-minutes="4" hidden>
     <article class="prose">
-<section class="hero"><p class="eyebrow">05 · 30 MIN<span class="readtime">약 4분</span></p><h1 class="hero-title">회의에서 결정할 내용을 눈에 보이게 만듭니다</h1></section>
+<section class="hero"><p class="eyebrow">05 · 25 MIN<span class="readtime">약 4분</span></p><h1 class="hero-title">회의에서 결정할 내용을 눈에 보이게 만듭니다</h1></section>
 
 <nav class="toc"><p class="toc-label">이 장의 목차</p><ol><li class="toc-l2"><a href="#day-6-s1">내용을 확인한 뒤 디자인을 고릅니다</a></li><li class="toc-l2"><a href="#day-6-s2">디자인 5개 중 하나를 선택합니다</a></li><li class="toc-l2"><a href="#day-6-s3">방법 A · 이미지로 만들기</a></li><li class="toc-l2"><a href="#day-6-s4">방법 B · 단일 HTML로 만들기</a></li><li class="toc-l3"><a href="#day-6-s5">저장하고 열기</a></li></ol></nav>
 
 <h2 id="day-6-s1">내용을 확인한 뒤 디자인을 고릅니다</h2>
 <div class="prompt"><div class="prompt-head"><span class="prompt-label">슬라이드에 넣을 내용 확정</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">내가 확인한 회의 준비 메모만 사용해 4장 슬라이드 문안을 정리하세요.
-1장: 결정할 질문과 제안 / 2장: 현재 문제와 확인된 근거 / 3장: 예상 우려와 보완책 / 4장: 2주 실험과 돌아볼 기준.
+나는 현대해상에서 [담당 업무·조직]을 맡고 있는 부장입니다.
+1장: 결정할 질문과 제안 / 2장: 현재 문제와 확인된 근거 / 3장: 예상 우려와 보완책 / 4장: 다음 행동과 점검 기준.
 장마다 제목 1개, 핵심 문장 1개, 보조 항목 최대 3개로 구성하세요.
 없는 수치·성과·출처는 만들지 말고 미확인은 표시하세요.
 먼저 문안만 보여주고 내가 확인할 때까지 제작하지 마세요.</pre></div>
@@ -1494,38 +1556,42 @@ AI 참모</h1>
 <td>실행 순서와 점검 기준 합의</td>
 </tr>
 </tbody>
-</table></div><p><strong>아래에서 하나만 복사합니다.</strong> 1번은 남색·주황을 이용한 교육용 참고 배색입니다. 공식 CI 색상값·로고가 제공되면 그 원본을 우선하며 로고를 AI로 재현하지 않습니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">1번 · 현대해상 색상 참고형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안에 다음 디자인을 적용하세요. 아직 제작하지 말고 원칙만 기억하세요.
+</table></div><p><strong>아래에서 하나만 고릅니다.</strong> 선택한 디자인 프롬프트를 방법 A 또는 B의 대괄호 위치에 붙여넣어 한 번에 요청합니다. 1번은 현대해상 CI의 남색·주황 계열을 참고한 배색이며 아래 수치는 교육용 참고값입니다. 공식 CI 원본이 제공되면 우선하고 로고는 AI로 재현하지 않습니다.</p>
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">1번 · 현대해상 색상 참고형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">디자인 지침: 다음 배색과 배치를 적용하세요.
 흰 배경, 짙은 남색 제목, 주황색 강조선을 사용하세요.
 남색 #003B71, 주황 #F58220은 공식 CI 수치가 아닌 교육용 참고값입니다.
 본문은 짙은 회색, 강조색은 핵심 단어와 선에만 쓰세요.
 제목은 위쪽, 핵심 내용은 중앙, 판단할 질문은 아래쪽에 두세요. 로고는 생성하지 마세요.</pre></div>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">2번 · 비즈니스 미니멀</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안에 다음 디자인을 적용하세요. 아직 제작하지 말고 원칙만 기억하세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">2번 · 비즈니스 미니멀</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">디자인 지침: 다음 배색과 배치를 적용하세요.
 흰 배경, 검정 제목, 회색 보조문장과 얇은 구분선만 사용하세요.
 한 장에 한 메시지를 담고, 제목과 핵심 문장을 왼쪽 정렬하세요.
 넓은 여백을 남기고 장식 아이콘·입체 효과·그림자는 사용하지 마세요.</pre></div>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">3번 · 질문 중심 편집형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안에 다음 디자인을 적용하세요. 아직 제작하지 말고 원칙만 기억하세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">3번 · 질문 중심 편집형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">디자인 지침: 다음 배색과 배치를 적용하세요.
 아이보리 배경, 짙은 회색 글자, 질문형 제목을 사용하세요.
 왼쪽에는 질문과 결론, 오른쪽에는 근거 또는 주의점 한 묶음을 배치하세요.
 강조색은 짙은 청록 한 가지로 제한하고 긴 문단은 피하세요.</pre></div>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">4번 · 비교·판단형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안에 다음 디자인을 적용하세요. 아직 제작하지 말고 원칙만 기억하세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">4번 · 비교·판단형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">디자인 지침: 다음 배색과 배치를 적용하세요.
 흰 배경과 남색 제목, 같은 폭의 2열 비교 구조를 사용하세요.
 현재 방식과 제안 방식의 항목 순서를 맞추고 미확인 효과는 가설로 표시하세요.
 마지막에는 선택 기준과 남은 질문을 넣으세요. 비교가 필요 없는 장은 한 열로 정리하세요.</pre></div>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">5번 · 실행계획형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안에 다음 디자인을 적용하세요. 아직 제작하지 말고 원칙만 기억하세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">5번 · 실행계획형</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">디자인 지침: 다음 배색과 배치를 적용하세요.
 흰 배경, 짙은 회색 제목, 차분한 파란 포인트를 사용하세요.
-실행계획 장은 준비 → 2주 시험 → 점검의 3단계로 배치하세요.
+실행계획 장은 준비 → 실행 → 점검의 3단계로 배치하세요.
 행동과 확인 기준을 짧게 적고 담당·기한이 미정이면 미정으로 표시하세요.</pre></div>
 <h2 id="day-6-s3">방법 A · 이미지로 만들기</h2>
 <p>이미지 생성이 가능할 때 선택합니다. <strong>한 장만</strong> 먼저 만들고 글자를 확인합니다.</p>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">이미지 슬라이드 제작 요청</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 문안과 선택한 스타일로 1번 슬라이드만 16:9 이미지로 만들어주세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">이미지 슬라이드 제작 요청</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">[마음에 드는 슬라이드 디자인 프롬프트 붙여넣기]
+
+확인한 문안과 위 디자인 지침으로 1번 슬라이드만 16:9 이미지로 만들어주세요.
 제목과 핵심 문장을 크게 쓰고 긴 문단과 작은 각주는 피하세요.
 가장자리에 충분한 여백을 남기고 한글 문구는 원문 그대로 사용하세요.
 이미지 생성 도구가 없으면 만들었다고 하지 말고 알려주세요.
 한 장을 확인한 후 다음 장을 요청하겠습니다.</pre></div>
 <p>오탈자·숫자·잘린 문장을 확대해 확인합니다. 이미지 글자가 계속 틀리거나 한도에 걸리면 HTML 방식으로 바꿉니다.</p>
 <h2 id="day-6-s4">방법 B · 단일 HTML로 만들기</h2>
-<div class="prompt"><div class="prompt-head"><span class="prompt-label">CSS를 포함한 단일 HTML 슬라이드</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">확인한 4장 문안과 선택한 디자인으로 단일 HTML 슬라이드를 만들어주세요.
+<div class="prompt"><div class="prompt-head"><span class="prompt-label">CSS를 포함한 단일 HTML 슬라이드</span><button class="copy-btn" type="button">복사</button></div><pre class="prompt-body">[마음에 드는 슬라이드 디자인 프롬프트 붙여넣기]
+
+확인한 4장 문안과 위 디자인 지침으로 단일 HTML 슬라이드를 만들어주세요.
 CSS와 필요한 JavaScript는 HTML 안에 넣고 외부 이미지·폰트·라이브러리는 사용하지 마세요. 여러 파일이나 ZIP은 만들지 마세요.
 화면은 16:9 비율이며 좁은 화면에서도 내용이 잘리지 않도록 하세요.
 폰트는 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif 순서로 사용하세요.
@@ -1600,13 +1666,13 @@ CSS와 필요한 JavaScript는 HTML 안에 넣고 외부 이미지·폰트·라�
 <h2 id="day-7-s3">마치기 전에</h2>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 지침과 회의 준비 메모를 다시 찾을 수 있습니다.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> HTML 또는 이미지를 저장하고 직접 열었습니다.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 프로필 이미지와 제작한 슬라이드를 저장하고 직접 열었습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> Notion 저장을 했다면 실제 페이지에서 확인했습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 공용 노트북에서 ChatGPT와 연결 서비스에 로그아웃했습니다.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox"  type="checkbox"> 내려받은 자료·브라우저 기록은 기관 안내에 따라 정리했습니다.</li>
 </ul>
 <h2 id="day-7-s4">기능이 달라졌을 때 확인할 공식 안내</h2>
-<p>기능·메뉴 확인 기준일: <strong>2026년 10월 19일</strong>. 계정·지역·한도에 따라 표시가 다릅니다. 무료 계정에서 모든 경로가 열린다는 뜻은 아닙니다.</p>
+<p>기능·메뉴 확인 기준일: <strong>2026년 10월 19일</strong>. 본인 화면의 메뉴와 한도를 확인합니다. 유료 결제 없이 가능한 범위에서 진행합니다.</p>
 <ul>
 <li><a href="https://learn.chatgpt.com/docs/projects">ChatGPT 프로젝트</a>: 대화·지침·자료 함께 사용하기.</li>
 <li><a href="https://learn.chatgpt.com/docs/plugins">플러그인</a>: 설치·연결·지원 환경 확인.</li>
@@ -1627,8 +1693,8 @@ CSS와 필요한 JavaScript는 HTML 안에 넣고 외부 이미지·폰트·라�
 </main>
 
 <footer class="footer">
-  <p>부장의 회의 준비를 돕는 AI 참모</p>
-  <p class="footer-sub">현대해상 신임부장 Step II · AI Leadership</p>
+  <p>AI Leadership</p>
+  <p class="footer-sub">AI와 함께 전략을 설계하고 리더십을 점검하다 · 현대해상 신임부장을 위한 AI 활용 전략·기획 및 리더십 과정</p>
 </footer>
 
 <!-- 오른쪽 아래 도구 모음 -->
@@ -1659,7 +1725,7 @@ CSS와 필요한 JavaScript는 HTML 안에 넣고 외부 이미지·폰트·라�
 <div class="toast" role="status" aria-live="polite"></div>
 
 <script>
-window.__WB_KEY__ = "\ubd80\uc7a5\uc758 \ud68c\uc758 \uc900\ube44\ub97c \ub3d5\ub294 AI \ucc38\ubaa8|8";
+window.__WB_KEY__ = "AI Leadership|8";
 /* ============================================================
    강의 웹교재 — 동작 스크립트
    외부 라이브러리 없음. file:// 로 직접 열어도 동작합니다.
